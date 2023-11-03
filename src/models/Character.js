@@ -75,21 +75,25 @@ class Character {
         this.vitality -= attackValue;
     }
 
-    battle = (firstCharacter, secondCharacter) => {
+    battle = (secondCharacter) => {
         while(true) {
-            firstCharacter.doAttack(secondCharacter, firstCharacter.attack);
-            secondCharacter.doAttack(firstCharacter, secondCharacter.attack);
+            this.doAttack(secondCharacter, this.attack);
+            secondCharacter.doAttack(this, secondCharacter.attack);
     
            
     
             if(this.verifyIsDead(secondCharacter)) {
-                console.log(`${firstCharacter.name} WIN!`);
-                break;
+                return {
+                    win: this.name,
+                    dead: secondCharacter.name
+                }
             }
 
-            if(this.verifyIsDead(firstCharacter)) {
-                console.log(`${secondCharacter.name} WIN!`);
-                break;
+            if(this.verifyIsDead(this)) {
+                return {
+                    win: secondCharacter.name,
+                    dead: this.name
+                }
             }
         }
     }

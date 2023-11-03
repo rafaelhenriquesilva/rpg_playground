@@ -1,0 +1,43 @@
+Testes Unitários:
+Função: Testes unitários são focados em testar partes individuais do código, como funções ou métodos, de forma isolada. Eles verificam se essas partes funcionam corretamente.
+Exemplo de Função: Uma função que testa uma função específica, usando estruturas como describe e it, é uma função de teste unitário.
+
+
+Testes de Integração:
+Função: Testes de integração verificam se diferentes partes do sistema funcionam corretamente quando integradas. Eles testam a comunicação e a colaboração entre os componentes.
+Exemplo de Função: Uma função que testa a interação entre vários módulos do sistema ou serviços externos.
+
+
+Testes de Aceitação:
+Função: Testes de aceitação verificam se o software atende aos requisitos do cliente e se funciona corretamente do ponto de vista do usuário.
+Exemplo de Função: Funções que automatizam simulações de interações do usuário, como clicar em botões, preencher formulários e verificar resultados.
+
+
+Testes de Regressão:
+Função: Testes de regressão garantem que novas alterações no código não introduzam novos bugs ou quebrem funcionalidades existentes.
+Exemplo de Função: Funções que executam testes anteriores para verificar se o comportamento ainda é o mesmo após as mudanças no código.
+
+
+Testes de Performance:
+Função: Testes de performance avaliam o desempenho do software, incluindo tempo de resposta, uso de recursos e escalabilidade.
+Exemplo de Função: Funções que executam operações repetidamente para medir e relatar o desempenho em diferentes cenários.
+
+
+Testes de Segurança:
+Função: Testes de segurança identificam vulnerabilidades e problemas de segurança no software.
+Exemplo de Função: Funções que tentam explorar vulnerabilidades conhecidas, como injeção de SQL, para verificar se o software é seguro.
+
+
+Testes de Usabilidade:
+Função: Testes de usabilidade avaliam a facilidade de uso e a experiência do usuário do software.
+Exemplo de Função: Funções que conduzem testes com usuários reais para coletar feedback sobre a usabilidade do sistema.
+
+
+Testes de Regressão Visual:
+Função: Testes de regressão visual verificam se a aparência visual do aplicativo permanece consistente após alterações no código.
+Exemplo de Função: Funções que comparam capturas de tela ou imagens antes e depois das alterações para identificar diferenças visuais.
+
+
+Testes de Acessibilidade:
+Função: Testes de acessibilidade verificam se o software atende a padrões de acessibilidade para pessoas com deficiência.
+Exemplo de Função: Funções que automatizam a verificação de recursos de acessibilidade, como rótulos de texto alternativo em imagens.
