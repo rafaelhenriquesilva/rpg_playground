@@ -1,5 +1,5 @@
 class Character {
-    classType = ['Knight', 'Sorcerer', 'Druid', 'Paladin'];
+    
     genderType = ['Masculine', 'Feminine'];
     speed = 100;
     strength = 100;
@@ -27,13 +27,6 @@ class Character {
         this.attack = attack;
     }
 
-    putClassType(classType) {
-        if (!this.classType.includes(classType)) {
-            throw new Error('Invalid class type');
-        }
-
-        this.classType = classType;
-    }
     
     showBasicInformation() {
         return `
@@ -49,10 +42,18 @@ class Character {
 
     levelUp() {
         this.level += 1;
+        this.speed  = parseFloat(this.speed) + (parseFloat(this.speed) * 0.1)
+        this.strength  = parseFloat(this.strength) + (parseFloat(this.strength) * 0.1)
+        this.vitality  = parseFloat(this.vitality) + (parseFloat(this.vitality) * 0.1)
+        this.attack  = parseFloat(this.attack) + (parseFloat(this.attack) * 0.1)
     }
 
     levelDown() {
         this.level -= 1;
+        this.speed = this.speed - (this.speed * 0.1)
+        this.strength = this.strength - (this.strength * 0.1)
+        this.vitality = this.vitality - (this.vitality * 0.1)
+        this.attack = this.attack - (this.attack * 0.1)
     }
 
     changeName(newName) {

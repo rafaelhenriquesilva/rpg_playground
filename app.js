@@ -24,6 +24,10 @@ let battle = (chracterOne, monster) => {
     }
 }
 
-crazyCharacter.attack = 5;
+for(let i = 0; i<=10; i++){
+    crazyCharacter.levelUp()
+}
+
+console.info(crazyCharacter.showHeroInformation())
 
 battle(crazyCharacter, crazyMonster);

@@ -1,6 +1,7 @@
 const Character = require('./Character');
 
 class Hero extends Character {
+    classType = ['Knight', 'Sorcerer', 'Druid', 'Paladin'];
     luck = 100;
     mana = 100;
     intelligence = 100;
@@ -8,6 +9,15 @@ class Hero extends Character {
     constructor() {
         super();
     }  
+
+    putClassType(classType) {
+        if (!this.classType.includes(classType)) {
+            throw new Error('Invalid class type');
+        }
+
+        this.classType = classType;
+    }
+    
 
     showHeroInformation() {
         return `
@@ -22,7 +32,8 @@ class Hero extends Character {
                 intelligence = ${this.intelligence},
                 dexterity = ${this.dexterity},
                 vitality = ${this.vitality},
-                luck = ${this.luck}
+                luck = ${this.luck},
+                attack = ${this.attack}
         `
     }
     
