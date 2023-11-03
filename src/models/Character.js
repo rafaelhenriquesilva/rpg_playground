@@ -36,7 +36,6 @@ class Character {
                 vitality = ${this.vitality},
                 speed = ${this.speed},
                 strength = ${this.strength},
-                vitality = ${this.vitality},
         `
     }
 
@@ -60,8 +59,8 @@ class Character {
         this.name = newName;
     }
 
-    verifyIsDead() {
-        if(this.vitality <= 0) {
+    verifyIsDead(character) {
+        if(character.vitality <= 0) {
             this.isDead = true;
             return true;
         }
@@ -74,6 +73,25 @@ class Character {
 
     recipeAtack(attackValue = 10) {
         this.vitality -= attackValue;
+    }
+
+    battle = (firstCharacter, secondCharacter) => {
+        while(true) {
+            firstCharacter.doAttack(secondCharacter, firstCharacter.attack);
+            secondCharacter.doAttack(firstCharacter, secondCharacter.attack);
+    
+           
+    
+            if(this.verifyIsDead(secondCharacter)) {
+                console.log(`${firstCharacter.name} WIN!`);
+                break;
+            }
+
+            if(this.verifyIsDead(firstCharacter)) {
+                console.log(`${secondCharacter.name} WIN!`);
+                break;
+            }
+        }
     }
 
 }
